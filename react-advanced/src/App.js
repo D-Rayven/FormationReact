@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 
 import './App.css';
 import Timer from './Timer';
-import video from './video.mp4';
 
 function App() {
 
@@ -26,7 +25,6 @@ function App() {
     <div className="App">
 
       <video ref={ref} width="750" height="500" autoPlay controls muted>
-        <source src={video} type='video/mp4'/>
       </video>
 
       <button onClick={toggleFunc}>Toggle</button>
