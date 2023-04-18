@@ -3,32 +3,21 @@ import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import Timer from './Timer';
 
+import Video from './video.mp4';
+
 function App() {
 
-  const ref = useRef();
+  const [toggle, setToggle] = useState(1);
 
-  console.log(ref);
-  useEffect(() => {
-    console.log(ref);
-    setTimeout(() => {
-      ref.current.pause();
-    }, 3000);
-  }, [])
-
-  const [toggle, setToggle] = useState(false);
 
   const toggleFunc = () => {
-    setToggle(!toggle);
+    setToggle(toggle + 1);
   }
 
   return (
     <div className="App">
-
-      <video ref={ref} width="750" height="500" autoPlay controls muted>
-      </video>
-
+      <h1>{toggle}</h1>
       <button onClick={toggleFunc}>Toggle</button>
-      {toggle && <Timer />}
     </div>
   );
 }
