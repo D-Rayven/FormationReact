@@ -1,9 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 
 import './App.css';
-import Timer from './Timer';
-
-import Video from './video.mp4';
+import Content from './Content';
 
 function App() {
 
@@ -16,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{toggle}</h1>
+      <Content num={5}/>
       <button onClick={toggleFunc}>Toggle</button>
     </div>
   );
