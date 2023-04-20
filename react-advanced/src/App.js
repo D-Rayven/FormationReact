@@ -1,22 +1,14 @@
-import { useState } from 'react';
-
 import './App.css';
-import Content from './Content';
+import Accord from './Components/Accord/Accord';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
 
-  const [toggle, setToggle] = useState(1);
-
-
-  const toggleFunc = () => {
-    setToggle(toggle + 1);
-  }
-
   return (
-    <div className="App">
-      <Content num={5}/>
-      <button onClick={toggleFunc}>Toggle</button>
-    </div>
+    <>
+    <Navbar />
+    <Accord />
+    </>
   );
 }
 
